@@ -24,27 +24,15 @@ const Login = () => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>Вход</h2>
-      <form onSubmit={handleLogin}>
-        <input 
-            type="email" 
-            placeholder="Имейл" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
-            required 
-        /><br/><br/>
-        <input 
-            type="password" 
-            placeholder="Парола" 
-            value={password} 
-            onChange={(e) => setPassword(e.target.value)} 
-            required 
-        /><br/><br/>
-        <button type="submit">Влез</button>
-      </form>
-    </div>
-  );
+  <div className="container">
+    <h2>Вход</h2>
+    <form onSubmit={handleLogin}>
+      <input type="email" placeholder="Имейл" value={email} onChange={(e) => setEmail(e.target.value)} required />
+      <input type="password" placeholder="Парола" value={password} onChange={(e) => setPassword(e.target.value)} required />
+      <button type="submit" className="main-button">Влез</button>
+    </form>
+  </div>
+);
 };
 
 export default Login;

@@ -1,72 +1,50 @@
-/* Дефинираме цветове, които ще ползваме навсякъде */
 :root {
-  --primary-color: #2c3e50;    /* Тъмно синьо за навигация */
-  --accent-color: #3498db;     /* Светло синьо за бутони */
-  --bg-color: #f8f9fa;         /* Много светло сив фон */
-  --text-color: #333;
+  --primary-color: #2c3e50;
+  --accent-color: #3498db;
+  --bg-color: #f4f7f6;
   --white: #ffffff;
-  --error-color: #e74c3c;
-  --success-color: #27ae60;
 }
 
 .App {
   min-height: 100vh;
   background-color: var(--bg-color);
-  font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Общ контейнер за страниците */
 .container {
-  max-width: 600px;
-  margin: 40px auto;
+  max-width: 500px;
+  margin: 50px auto;
   padding: 30px;
   background: var(--white);
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Модерна, лека сянка */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
-/* Стил за всички текстови полета */
 input {
   width: 100%;
-  padding: 12px 15px;
-  margin: 8px 0 20px 0;
-  display: inline-block;
+  padding: 12px;
+  margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-sizing: border-box; /* Важно: за да не излизат от контейнера */
-  transition: border-color 0.3s;
+  box-sizing: border-box;
 }
 
-input:focus {
-  outline: none;
-  border-color: var(--accent-color);
-}
-
-/* Стил за главния бутон */
 .main-button {
   width: 100%;
   background-color: var(--accent-color);
   color: white;
-  padding: 14px 20px;
+  padding: 12px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
   font-weight: 600;
-  transition: opacity 0.3s;
 }
 
-.main-button:hover {
-  opacity: 0.9;
-}
-
-/* Стил за бутона в навигацията */
-.nav-button {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-left: 10px;
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: #f9f9f9;
+  border-left: 4px solid var(--accent-color);
+  margin-bottom: 10px;
+  border-radius: 4px;
 }

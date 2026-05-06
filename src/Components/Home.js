@@ -4,21 +4,25 @@ const Home = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    // Извличаме данните при зареждане на страницата
     fetch('http://localhost:8000/users')
       .then(res => res.json())
       .then(data => setUsers(data));
   }, []);
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Добре дошли в моя проект!</h1>
-      <h3>Регистрирани потребители (динамични данни):</h3>
-      <ul>
+    <div className="container">
+      <h1>Начална страница</h1>
+      <p>Добре дошли в моето React приложение!</p>
+      <hr style={{ margin: '20px 0', opacity: '0.2' }} />
+      <h3>Регистрирани потребители (Динамични данни):</h3>
+      <div className="user-list">
         {users.map(user => (
-          <li key={user.id}>{user.username} ({user.email})</li>
+          <div key={user.id} className="user-card">
+            <strong>{user.username}</strong>
+            <span style={{ color: '#666' }}>{user.email}</span>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

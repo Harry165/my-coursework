@@ -36,44 +36,16 @@ const Register = () => {
 };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>Регистрация</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Потребителско име:</label><br/>
-          <input 
-            type="text" 
-            name="username" 
-            value={formData.username} 
-            onChange={handleChange} 
-            required 
-          />
-        </div>
-        <div>
-          <label>Имейл:</label><br/>
-          <input 
-            type="email" 
-            name="email" 
-            value={formData.email} 
-            onChange={handleChange} 
-            required 
-          />
-        </div>
-        <div>
-          <label>Парола:</label><br/>
-          <input 
-            type="password" 
-            name="password" 
-            value={formData.password} 
-            onChange={handleChange} 
-            required 
-          />
-        </div>
-        <br/>
-        <button type="submit">Регистрирай се</button>
-      </form>
-    </div>
-  );
+  <div className="container">
+    <h2>Регистрация</h2>
+    <form onSubmit={handleSubmit}>
+      <input type="text" name="username" placeholder="Потребителско име" value={formData.username} onChange={handleChange} required />
+      <input type="email" name="email" placeholder="Имейл" value={formData.email} onChange={handleChange} required />
+      <input type="password" name="password" placeholder="Парола" value={formData.password} onChange={handleChange} required />
+      <button type="submit" className="main-button">Създай акаунт</button>
+    </form>
+  </div>
+);
 };
 
 export default Register;
