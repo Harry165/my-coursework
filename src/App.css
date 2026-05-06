@@ -1,38 +1,72 @@
+/* Дефинираме цветове, които ще ползваме навсякъде */
+:root {
+  --primary-color: #2c3e50;    /* Тъмно синьо за навигация */
+  --accent-color: #3498db;     /* Светло синьо за бутони */
+  --bg-color: #f8f9fa;         /* Много светло сив фон */
+  --text-color: #333;
+  --white: #ffffff;
+  --error-color: #e74c3c;
+  --success-color: #27ae60;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: var(--bg-color);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Общ контейнер за страниците */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Модерна, лека сянка */
+}
+
+/* Стил за всички текстови полета */
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0 20px 0;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box; /* Важно: за да не излизат от контейнера */
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+/* Стил за главния бутон */
+.main-button {
+  width: 100%;
+  background-color: var(--accent-color);
   color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: opacity 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.main-button:hover {
+  opacity: 0.9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Стил за бутона в навигацията */
+.nav-button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
 }
