@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "username": "moni",
+      "email": "pate@gmail.com",
+      "password": "obichampati",
+      "id": "gqQ_zoersCY"
+    }
+  ],
+  "posts": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
